@@ -1,0 +1,354 @@
+% ************* Make changes after \begin{document} ***************
+%
+%  August 07: original template is from 
+%  http://www.slac.stanford.edu/econf/editors/eprint-template/instructions.html
+%             Modified for CHARM 2007
+%
+%% ****** Start of file slactemplate.tex ****** %
+%%
+%%
+%%   This file is part of the APS files in the REVTeX 4 distribution.
+%%   Version 4.0 of REVTeX, August 2001
+%%
+%%
+%%   Copyright (c) 2001 The American Physical Society.
+%%
+%%   See the REVTeX 4 README file for restrictions and more information.
+%%
+%
+% This is a template for producing manuscripts for use with REVTEX 4.0
+% Copy this file to another name and then work on that file.
+% That way, you always have this original template file to use.
+%
+\documentclass[twocolumn,twoside,slac_two]{revtex4}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all fields
+\fancyhead[C]{\it {
+Proceedings of the DPF-2009 Conference, Detroit, MI, July 27-31, 2009
+}} \fancyhead[RO,LE]{\thepage}
+\fancyfoot{} % clear all fields
+\fancyfoot[LE,LO]{}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\sfdefault}{phv}
+
+\setlength{\textheight}{235mm}
+\setlength{\textwidth}{170mm}
+\setlength{\topmargin}{1mm}
+
+\bibliographystyle{apsrev}
+
+% ************* Make changes after here  ***************
+
+\begin{document}
+
+%Title of paper
+\title{LaTeX Template for DPF-2009 Conference Proceedings}
+
+% Repeat the \author .. \affiliation  etc. as needed
+%
+% \affiliation command applies to all authors since the last
+% \affiliation command. The \affiliation command should follow the
+% other information
+
+\author{A.A. Petrov}
+\affiliation{Department of Physics and Astronomy, Wayne State University, Detroit, MI 48201, USA}
+%
+%
+
+\begin{abstract}
+This document serves as a template for the proceedings of the DPF-2009 conference.  
+Authors should prepare their papers using a copy and follow the guidelines described here.
+Please do not modify the page layout or styles. 
+\end{abstract}
+
+%\maketitle must follow title, authors, abstract
+\maketitle
+
+\thispagestyle{fancy}
+
+% body of paper here - Use proper section commands
+% References should be done using the \cite, \ref, and \label commands
+% Put \label in argument of \section for cross-referencing
+%\section{\label{}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+Proceedings of the DPF-2009 Conference
+will be made available at the Electronic Conference Proceedings 
+Archive\footnote{http://www.slac.stanford.edu/econf/search.html}
+under eConf 090726.  
+The purpose of this document is to guide the author and to provide a template 
+that maintains a uniform style for the proceedings; the next sections
+will describe this in detail.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Using this Template}
+The first step to preparing the paper is to copy the slac\_two.rtx file, 
+available at the 
+DPF-2009 web site\footnote{http://www.dpf2009.wayne.edu/proceedings.php} 
+for download as a template package, into a new directory.
+Next copy this template (dpf2009\_template.tex) 
+and rename it as dpf2009\_SpeakerName.tex, 
+where SpeakerName should be replaced by the author name
+(remove spacing between the first and last names as in this example). 
+Edit the file to make the necessary modifications and save when finished. 
+
+Because this template has been set up to meet requirements for conference proceedings  
+papers, it is important to maintain these established styles.   
+Other editorial guidelines are described in the next section.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Manuscript}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Page Limits and Text Layout}
+The guidelines for the length of articles are: 6, 8 and 10 pages for talks of length 20, 25 and 
+30 minutes, including the time allocated for questions.  Please avoid nestling more than 
+three sub-levels in sections; also the first character of section title key words should be
+uppercase.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Acronyms and Abbreviations}
+Acronyms should be defined the first time they appear.  
+Abbreviations may be used for figures (Fig.), equations (Eq.) 
+or if they are commonly used in language (etc., e.g., i.e., v.s.).
+However, when starting a sentence, abbreviations should not be used.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Tables}
+Tables may be one (e.g.~Table~\ref{example_table})
+or two columns (e.g.~Table~\ref{example_table_2col})
+in width with single border lines.
+The caption should appear above the table and, 
+in the tex file, labels should be used to refer to tables.
+
+% tables should appear as floats within the text
+%
+% Here is an example of the general form of a table:
+% Fill in the caption in the braces of the \caption{} command. Put the label
+% that you will use with \ref{} command in the braces of the \label{} command.
+% Insert the column specifiers (l, r, c, d, etc.) in the empty braces of the
+% \begin{tabular}{} command.
+% The ruledtabular environment adds doubled rules to table and sets a
+% reasonable default table settings.
+% Use the table* environment to get a full-width table in two-column
+% Add \usepackage{longtable} and the longtable (or longtable*}
+% environment for nicely formatted long tables. Or use the the [H]
+% placement option to break a long table (with less control than
+% in longtable).
+% \begin{table}%[H] add [H] placement to break table across pages
+% \caption{\label{}}
+% \begin{ruledtabular}
+% \begin{tabular}{}
+% Lines of table here ending with \\
+% \end{tabular}
+% \end{ruledtabular}
+% \end{table}
+% Surround table environment with turnpage environment for landscape
+% table
+% \begin{turnpage}
+% \begin{table}
+% \caption{\label{}}
+% \begin{ruledtabular}
+% \begin{tabular}{}
+% \end{tabular}
+% \end{ruledtabular}
+% \end{table}
+% \end{turnpage}
+
+\begin{table}[h]
+\begin{center}
+\caption{Example of a Table.}
+\begin{tabular}{|l|c|c|c|}
+\hline \textbf{Margin} & \textbf{Dual} & \textbf{A4 Paper} &
+\textbf{US Letter Paper}
+\\
+\hline Top & 7.6 mm & 37 mm & 19 mm \\
+ & (0.3 in) & (1.45 in) & (0.75 in) \\
+\hline Bottom & 20 mm & 19 mm & 19 mm \\
+ & (0.79 in) & (0.75 in)& (0.75 in) \\
+\hline Left & 20 mm & 20 mm & 20 mm \\
+ & (0.79 in) & (0.79 in) & (0.79 in) \\
+\hline Right & 20 mm & 20 mm & 26 mm \\
+ & (0.79 in) & (0.79 in) & (1.0 in) \\
+\hline
+\end{tabular}
+\label{example_table}
+\end{center}
+\end{table}
+
+\begin{table*}[t]
+\begin{center}
+\caption{Example of a Full Width Table.}
+\begin{tabular}{|l|c|c|c|c|c|c||l|c|c|c|c|c|c|}
+\hline \textbf{H-Margin} & \multicolumn{2}{c|}{\textbf{Dual}} & 
+\multicolumn{2}{c|}{\textbf{A4}} &
+\multicolumn{2}{c||}{\textbf{US Letter}} &
+\textbf{V-Margins} & \multicolumn{2}{c|}{\textbf{Dual}} &
+\multicolumn{2}{c|}{\textbf{A4}} &
+\multicolumn{2}{c|}{\textbf{US Letter}} \\
+\hline 
+Left & 20 mm & 0.79 in & 20 mm & 0.79 in & 20 mm & 0.79 in &
+Top & 7.6 mm & 0.3 in & 37 mm & 1.45 in & 19 mm & 0.75 in \\
+\hline 
+Right & 20 mm & 0.79 in & 20 mm & 0.79 in & 26 mm & 1.0 in &
+Bottom & 20 mm & 0.79 in  & 19 mm & 0.75 in & 19 mm & 0.75 in \\
+\hline
+\end{tabular}
+\label{example_table_2col}
+\end{center}
+\end{table*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Figures}
+
+% figures should be put into the text as floats.
+% Use the graphics or graphicx packages (distributed with LaTeX2e)
+% and the \includegraphics macro defined in those packages.
+% See the LaTeX Graphics Companion by Michel Goosens, Sebastian Rahtz,
+% and Frank Mittelbach for instance.
+%
+% Here is an example of the general form of a figure:
+% Fill in the caption in the braces of the \caption{} command. Put the label
+% that you will use with \ref{} command in the braces of the \label{} command.
+% Use the figure* environment if the figure should span across the
+% entire page. There is no need to do explicit centering.
+
+% \begin{figure}
+% \includegraphics{}%
+% \caption{\label{}}
+% \end{figure}
+
+% Surround figure environment with turnpage environment for landscape
+% figure
+% \begin{turnpage}
+% \begin{figure}
+% \includegraphics{}%
+% \caption{\label{}}
+% \end{figure}
+% \end{turnpage}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=80mm]{figure1.eps}
+\caption{Example of a One-column Figure.} \label{example_figure}
+\end{figure}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=135mm]{figure2.eps}
+\caption{Example of a Full Width Figure.} \label{example_figure_col2}
+\end{figure*}
+
+Figures may be one column (e.g.~Figure~\ref{example_figure}) 
+or span the paper width (e.g.~Figure~\ref{example_figure_col2}).
+Labels should be used to refer to the figures in the tex file.
+The figure caption should appear below the figure.  
+Color figures are encouraged; however note that some colors, such as 
+pale yellow, will not be visible when printed.  
+Lettering in figures should be large enough to be visible.
+Filenames of figures in the tex file should be numbered
+consecutively, e.g. figure1.ps, figure2a.ps, figure2b.ps, figure3.ps, etc.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Equations}
+Equations may be displayed in several ways, as in Eq.~\ref{eq-xy} 
+
+\begin{equation}
+x = y.
+\label{eq-xy}
+\end{equation}
+
+The {\em eqnarray} environment may be used to
+split equations into several lines or to align several equations, 
+for example in Eq.~\ref{eq-sp}
+
+\begin{eqnarray}
+T & = & Im[V_{11} {V_{12}}^* {V_{21}}^* V_{22}]  \nonumber \\
+&  & + Im[V_{12} {V_{13}}^* {V_{22}}^* V_{23}]   \nonumber \\
+&  & - Im[V_{33} {V_{31}}^* {V_{13}}^* V_{11}].
+\label{eq-sp}
+\end{eqnarray}
+
+An alternative method is shown in Eq.~\ref{eq-spa} for long sets of
+equations where only one referencing equation number is required.  
+Again, references should be to labels and not hard-coded equation numbers.
+
+\begin{equation}
+\begin{array}{rcl}
+\bf{K} & = &  Im[V_{j, \alpha} {V_{j,\alpha + 1}}^*
+{V_{j + 1,\alpha }}^* V_{j + 1, \alpha + 1} ] \\
+       &   & + Im[V_{k, \alpha + 2} {V_{k,\alpha + 3}}^*
+{V_{k + 1,\alpha + 2 }}^* V_{k + 1, \alpha + 3} ]  \\
+       &   & + Im[V_{j + 2, \beta} {V_{j + 2,\beta + 1}}^*
+{V_{j + 3,\beta }}^* V_{j + 3, \beta + 1} ]  \\
+       &   & + Im[V_{k + 2, \beta + 2} {V_{k + 2,\beta + 3}}^*
+{V_{k + 3,\beta + 2 }}^* V_{k + 3, \beta + 3}], \\
+& & \\
+\bf{M} & = &  Im[{V_{j, \alpha}}^* V_{j,\alpha + 1}
+V_{j + 1,\alpha } {V_{j + 1, \alpha + 1}}^* ]  \\
+       &   & + Im[V_{k, \alpha + 2} {V_{k,\alpha + 3}}^*
+{V_{k + 1,\alpha + 2 }}^* V_{k + 1, \alpha + 3} ]  \\
+       &   & + Im[{V_{j + 2, \beta}}^* V_{j + 2,\beta + 1}
+V_{j + 3,\beta } {V_{j + 3, \beta + 1}}^* ]  \\
+       &   & + Im[V_{k + 2, \beta + 2} {V_{k + 2,\beta + 3}}^*
+{V_{k + 3,\beta + 2 }}^* V_{k + 3, \beta + 3}].
+\\ & &
+\end{array}\label{eq-spa}
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Footnotes} 
+Footnotes should only be used in the body of the
+paper and not placed after the list of authors, affiliations, or
+in the abstract. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Paper Submission}
+
+Authors should submit their papers to the ePrint arXiv 
+server\footnote{http://arxiv.org/help} 
+after verifying that it is processed correctly by the LaTeX processor.
+Please submit the source code, the style files 
+(revsymb.sty, revtex4.cls, slac\_two.rtx) 
+and any figures; 
+these should be self-contained to generate the paper from source.  
+
+It is the author's responsibility to ensure that the papers are 
+generated correctly from the source code at the ePrint server. 
+After the paper is accepted by the ePrint server, please verify that
+the layout in the resulting  PDF file conforms to the guidelines 
+described in this document.
+Finally, contact the organizers of DPF-2009 and your parallel session conveners 
+(see http://www.dpf2009.wayne.edu) with the ePrint number of the paper; 
+the deadline to do this is 2~October~2009.
+
+% If you have acknowledgments, this puts in the proper section head.
+%\bigskip % extra skip inserted
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{acknowledgments}
+This document is adapted from the instructions provided to the authors
+of the proceedings papers at CHARM~07, Ithaca, NY~\cite{charm07},  
+and from eConf templates~\cite{templates-ref}.
+\end{acknowledgments}
+
+\bigskip % extra skip inserted
+% Create the reference section using BibTeX:
+%\bibliography{basename of .bib file}
+\begin{thebibliography}{9}   % Use for  1-9  references
+%\begin{thebibliography}{99} % Use for 10-99 references
+
+\bibitem{charm07}   http://www.lepp.cornell.edu/charm07/
+
+\bibitem{templates-ref} http://www.slac.stanford.edu/econf/editors/eprint-template/instructions.html
+
+\end{thebibliography}
+
+
+\end{document}
+
